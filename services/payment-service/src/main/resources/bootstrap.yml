@@ -1,0 +1,7 @@
+# Spring Cloud Bootstrap file
+spring:
+  application:
+    name: payment-service
+  cloud:
+    config:
+      uri: http://config-service:8888

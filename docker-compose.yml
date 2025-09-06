@@ -1,0 +1,54 @@
+version: '3.8'
+
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:24.0.4
+    container_name: keycloak
+    environment:
+      - KEYCLOAK_ADMIN=admin
+      - KEYCLOAK_ADMIN_PASSWORD=admin
+    ports:
+      - "9090:8080"
+    command: "start-dev"
+
+  config-service:
+    build: ./services/config-service
+    container_name: config-service
+    ports:
+      - "8888:8888"
+
+  api-gateway-service:
+    build: ./services/api-gateway-service
+    container_name: api-gateway-service
+    ports:
+      - "80:8080" # Entry point for the application
+
+  identity-service:
+    build: ./services/identity-service
+    container_name: identity-service
+    ports:
+      - "8081:8080" # Host:Container
+
+  catalog-service:
+    build: ./services/catalog-service
+    container_name: catalog-service
+    ports:
+      - "8082:8080"
+
+  order-service:
+    build: ./services/order-service
+    container_name: order-service
+    ports:
+      - "8083:8080"
+
+  inventory-service:
+    build: ./services/inventory-service
+    container_name: inventory-service
+    ports:
+      - "8084:8080"
+
+  payment-service:
+    build: ./services/payment-service
+    container_name: payment-service
+    ports:
+      - "8085:8080"

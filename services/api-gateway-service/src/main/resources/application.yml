@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: api-gateway-service
+  cloud:
+    gateway:
+      routes:
+        # Identity Service Route
+        - id: identity-service-route
+          uri: http://identity-service:8080
+          predicates:
+            - Path=/api/identity/**
+          filters:
+            - StripPrefix=2 # Elimina /api/identity de la ruta antes de reenviar
+
+        # Catalog Service Route
+        - id: catalog-service-route
+          uri: http://catalog-service:8080
+          predicates:
+            - Path=/api/catalog/**
+          filters:
+            - StripPrefix=2
+
+        # Order Service Route
+        - id: order-service-route
+          uri: http://order-service:8080
+          predicates:
+            - Path=/api/order/**
+          filters:
+            - StripPrefix=2
+
+        # Inventory Service Route
+        - id: inventory-service-route
+          uri: http://inventory-service:8080
+          predicates:
+            - Path=/api/inventory/**
+          filters:
+            - StripPrefix=2
+
+        # Payment Service Route
+        - id: payment-service-route
+          uri: http://payment-service:8080
+          predicates:
+            - Path=/api/payment/**
+          filters:
+            - StripPrefix=2
+
+server:
+  port: 8080

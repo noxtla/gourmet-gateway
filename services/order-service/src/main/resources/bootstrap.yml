@@ -1,0 +1,7 @@
+# Spring Cloud Bootstrap file
+spring:
+  application:
+    name: order-service
+  cloud:
+    config:
+      uri: http://config-service:8888
