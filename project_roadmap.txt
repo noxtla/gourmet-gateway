@@ -1,0 +1,60 @@
+# Hoja de Ruta del Proyecto: Noxtla Gourmet Suite
+
+## Fase 1: Creación del Esqueleto del Proyecto (Scaffolding)
+
+1.  **Limpieza Inicial:**
+    1.1. Eliminar directorios preexistentes (`identity-service`, `src`) para empezar desde cero.
+
+2.  **Estructura de Directorios:**
+    2.1. Crear el directorio `services`.
+    2.2. Crear los directorios para cada microservicio dentro de `services`: `identity-service`, `catalog-service`, `order-service`, `inventory-service`, `payment-service`.
+    2.3. Crear la estructura de paquetes de Java completa para cada servicio (ej. `services/identity-service/src/main/java/com/noxtla/gourmet/identity`).
+    2.4. Crear el directorio `src/main/resources` para cada servicio.
+
+3.  **Creación de Archivos Base:**
+    3.1. Crear un archivo `docker-compose.yml` en la raíz del proyecto.
+    3.2. Para cada servicio, crear los siguientes archivos vacíos:
+        - `pom.xml`
+        - `Dockerfile`
+        - `src/main/resources/application.yml`
+        - `src/main/java/com/noxtla/gourmet/[nombre]/[Nombre]ServiceApplication.java`
+
+## Fase 2: Implementación y Verificación Inicial
+
+4.  **Configuración Mínima de Servicios:**
+    4.1. Añadir el código básico de una aplicación Spring Boot a cada archivo `*Application.java`.
+    4.2. Poblar cada `pom.xml` con las dependencias mínimas de Spring Boot.
+    4.3. Añadir un controlador REST de prueba (ej. un endpoint `/ping`) a cada servicio.
+
+5.  **Contenerización y Orquestación:**
+    5.1. Escribir un `Dockerfile` funcional para cada servicio.
+    5.2. Configurar `docker-compose.yml` para levantar todos los servicios y verificar que se comunican.
+
+## Fase 3: Características Avanzadas (Nivel Portafolio)
+
+6.  **Gateway de API (API Gateway):**
+    6.1. Crear un nuevo `api-gateway-service` con Spring Cloud Gateway.
+    6.2. Configurar las rutas hacia los demás microservicios.
+
+7.  **Configuración Centralizada (Config Server):**
+    7.1. Crear un `config-service` con Spring Cloud Config.
+    7.2. Crear un repositorio Git para almacenar los archivos de configuración.
+    7.3. Conectar los microservicios al Config Server.
+
+8.  **Seguridad con Keycloak (Identity & Access Management):**
+    8.1. Añadir Keycloak al `docker-compose.yml`.
+    8.2. Configurar un "realm" y los clientes para nuestros servicios en la consola de Keycloak.
+    8.3. Integrar Spring Security y el adaptador de Keycloak para proteger los endpoints.
+
+9.  **Arquitectura Orientada a Eventos (Kafka):**
+    9.1. Añadir Kafka y Zookeeper al `docker-compose.yml`.
+    9.2. Implementar productores y consumidores de eventos en los servicios (`order`, `inventory`, `payment`) para la Saga de Pedidos.
+
+10. **Pruebas Avanzadas (Testing):**
+    10.1. Implementar pruebas de integración con Testcontainers para verificar la conexión a base de datos y Kafka.
+    10.2. (Opcional) Implementar pruebas de contrato con Pact.
+
+11. **Observabilidad (Monitoring):**
+    11.1. Añadir Prometheus, Grafana y Jaeger (o Zipkin) al `docker-compose.yml`.
+    11.2. Instrumentar los servicios para generar métricas y trazas distribuidas.
+    11.3. Crear un panel básico en Grafana para visualizar el estado del sistema.
