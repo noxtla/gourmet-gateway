@@ -1,3 +1,4 @@
+# syntax=docker/dockerfile:1
 # Etapa 1: Compilar la aplicación con Maven
 FROM maven:3.9-eclipse-temurin-17 AS build
 
@@ -9,7 +10,8 @@ COPY pom.xml .
 COPY src ./src
 
 # Construir la aplicación, omitiendo los tests para acelerar el proceso de build
-RUN mvn clean install -DskipTests
+# Usamos --mount=type=cache para que el directorio .m2 se guarde en la caché de build de Docker
+RUN --mount=type=cache,target=/root/.m2 mvn clean install -DskipTests
 
 # Etapa 2: Crear la imagen final y ligera
 FROM eclipse-temurin:17-jre-jammy

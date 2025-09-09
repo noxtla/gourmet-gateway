@@ -1,0 +1,63 @@
+--- Stats captured at: Tue Sep  9 10:32:17 PM UTC 2025 ---
+CONTAINER ID   NAME      CPU %     MEM USAGE / LIMIT   MEM %     NET I/O   BLOCK I/O   PIDS
+
+--- Stats captured at: Tue Sep  9 10:32:33 PM UTC 2025 ---
+CONTAINER ID   NAME      CPU %     MEM USAGE / LIMIT   MEM %     NET I/O   BLOCK I/O   PIDS
+
+--- Stats captured at: Tue Sep  9 10:32:35 PM UTC 2025 ---
+CONTAINER ID   NAME      CPU %     MEM USAGE / LIMIT   MEM %     NET I/O   BLOCK I/O   PIDS
+
+--- Stats captured at: Tue Sep  9 10:32:52 PM UTC 2025 ---
+CONTAINER ID   NAME      CPU %     MEM USAGE / LIMIT   MEM %     NET I/O   BLOCK I/O   PIDS
+
+--- Stats captured at: Tue Sep  9 10:32:54 PM UTC 2025 ---
+CONTAINER ID   NAME      CPU %     MEM USAGE / LIMIT   MEM %     NET I/O   BLOCK I/O   PIDS
+
+--- Stats captured at: Tue Sep  9 10:32:56 PM UTC 2025 ---
+CONTAINER ID   NAME      CPU %     MEM USAGE / LIMIT   MEM %     NET I/O   BLOCK I/O   PIDS
+
+--- Stats captured at: Tue Sep  9 10:33:20 PM UTC 2025 ---
+CONTAINER ID   NAME      CPU %     MEM USAGE / LIMIT   MEM %     NET I/O   BLOCK I/O   PIDS
+
+--- Stats captured at: Tue Sep  9 10:33:25 PM UTC 2025 ---
+CONTAINER ID   NAME      CPU %     MEM USAGE / LIMIT   MEM %     NET I/O   BLOCK I/O   PIDS
+
+--- Stats captured at: Tue Sep  9 10:33:27 PM UTC 2025 ---
+CONTAINER ID   NAME      CPU %     MEM USAGE / LIMIT   MEM %     NET I/O   BLOCK I/O   PIDS
+
+--- Stats captured at: Tue Sep  9 10:34:47 PM UTC 2025 ---
+CONTAINER ID   NAME      CPU %     MEM USAGE / LIMIT   MEM %     NET I/O   BLOCK I/O   PIDS
+
+--- Stats captured at: Tue Sep  9 10:37:11 PM UTC 2025 ---
+CONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O          BLOCK I/O       PIDS
+99ed9511c88e   inventory-service     208.60%   0B / 0B             0.00%     2.15kB / 560B    3.93GB / 30GB   0
+e7e6340083c1   identity-service      199.38%   0B / 0B             0.00%     2.18kB / 559B    3.93GB / 30GB   0
+5f8657a0d978   order-service         202.51%   0B / 0B             0.00%     2.18kB / 556B    3.93GB / 30GB   0
+3b35e44785a9   payment-service       207.99%   0B / 0B             0.00%     2.22kB / 600B    3.93GB / 30GB   0
+dd1bec798ef7   catalog-service       198.27%   0B / 0B             0.00%     2.18kB / 558B    3.93GB / 30GB   0
+f44c424efbc9   api-gateway-service   201.49%   0B / 0B             0.00%     2.37kB / 754B    3.93GB / 30GB   0
+d80ad36e14e2   config-service        203.34%   0B / 0B             0.00%     255kB / 56.6kB   3.93GB / 30GB   0
+16bb2f1022d4   keycloak              198.60%   0B / 0B             0.00%     1.48kB / 192B    3.93GB / 30GB   0
+
+--- Stats captured at: Tue Sep  9 10:37:52 PM UTC 2025 ---
+CONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O          BLOCK I/O       PIDS
+99ed9511c88e   inventory-service     196.35%   0B / 0B             0.00%     2.22kB / 560B    3.99GB / 30GB   0
+e7e6340083c1   identity-service      195.25%   0B / 0B             0.00%     2.18kB / 559B    3.99GB / 30GB   0
+5f8657a0d978   order-service         196.60%   0B / 0B             0.00%     2.18kB / 556B    3.99GB / 30GB   0
+3b35e44785a9   payment-service       194.31%   0B / 0B             0.00%     2.22kB / 600B    3.99GB / 30GB   0
+dd1bec798ef7   catalog-service       197.27%   0B / 0B             0.00%     2.18kB / 558B    3.99GB / 30GB   0
+f44c424efbc9   api-gateway-service   197.53%   0B / 0B             0.00%     2.37kB / 754B    3.99GB / 30GB   0
+d80ad36e14e2   config-service        199.74%   0B / 0B             0.00%     292kB / 66.8kB   3.99GB / 30GB   0
+16bb2f1022d4   keycloak              194.87%   0B / 0B             0.00%     1.48kB / 192B    3.99GB / 30GB   0
+
+--- Stats captured at: Tue Sep  9 10:38:54 PM UTC 2025 ---
+CONTAINER ID   NAME                  CPU %     MEM USAGE / LIMIT   MEM %     NET I/O          BLOCK I/O       PIDS
+99ed9511c88e   inventory-service     198.69%   0B / 0B             0.00%     2.47kB / 734B    4.04GB / 30GB   0
+e7e6340083c1   identity-service      194.37%   0B / 0B             0.00%     2.42kB / 733B    4.04GB / 30GB   0
+5f8657a0d978   order-service         194.76%   0B / 0B             0.00%     2.46kB / 772B    4.04GB / 30GB   0
+3b35e44785a9   payment-service       195.11%   0B / 0B             0.00%     2.47kB / 774B    4.04GB / 30GB   0
+dd1bec798ef7   catalog-service       193.82%   0B / 0B             0.00%     2.42kB / 732B    4.04GB / 30GB   0
+f44c424efbc9   api-gateway-service   194.19%   0B / 0B             0.00%     2.59kB / 970B    4.04GB / 30GB   0
+d80ad36e14e2   config-service        194.57%   0B / 0B             0.00%     355kB / 86.1kB   4.04GB / 30GB   0
+16bb2f1022d4   keycloak              193.98%   0B / 0B             0.00%     1.48kB / 192B    4.04GB / 30GB   0
+
