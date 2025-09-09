@@ -1,0 +1,855 @@
+- #0 building with "default" instance using docker driver
+- 
+- #1 [config-service internal] load build definition from Dockerfile
+- #1 ...
+- 
+- #2 [config-service internal] load .dockerignore
+- #2 transferring context: 2B 0.1s done
+- #2 DONE 0.3s
+- 
+- #1 [config-service internal] load build definition from Dockerfile
+- #1 transferring dockerfile: 766B 0.1s done
+- #1 DONE 0.4s
+- 
+- #3 [config-service internal] load metadata for docker.io/library/eclipse-temurin:17-jre-jammy
+- #3 DONE 1.9s
+- 
+- #4 [config-service internal] load metadata for docker.io/library/maven:3.9-eclipse-temurin-17
+- #4 DONE 2.0s
+- 
+- #5 [config-service stage-1 1/3] FROM docker.io/library/eclipse-temurin:17-jre-jammy@sha256:93db0dba1dacb225fed826c2ae720adae9a71205f2b199b8af7e4df5be010cb7
+- #5 DONE 0.0s
+- 
+- #6 [config-service build 1/5] FROM docker.io/library/maven:3.9-eclipse-temurin-17@sha256:d7d39e47098e14b4b09ddb95354b134dacc98f66670d1c22b567fca70995879c
+- #6 DONE 0.0s
+- 
+- #7 [config-service internal] load build context
+- #7 transferring context: 500B done
+- #7 DONE 0.0s
+- 
+- #8 [config-service stage-1 2/3] WORKDIR /app
+- #8 CACHED
+- 
+- #9 [config-service build 2/5] WORKDIR /app
+- #9 CACHED
+- 
+- #10 [config-service build 3/5] COPY pom.xml .
+- #10 CACHED
+- 
+- #11 [config-service build 4/5] COPY src ./src
+- #11 CACHED
+- 
+- #12 [config-service build 5/5] RUN mvn clean install -DskipTests
+- #12 CACHED
+- 
+- #13 [config-service stage-1 3/3] COPY --from=build /app/target/config-service-0.0.1-SNAPSHOT.jar app.jar
+- #13 CACHED
+- 
+- #14 [config-service] exporting to image
+- #14 exporting layers done
+- #14 writing image sha256:719ccfa3448254a2ccee1433cead12ee7ac8eaebc21e4af70631bb82abbbd27f 0.0s done
+- #14 naming to docker.io/library/gourmet-gateway-config-service done
+- #14 DONE 0.0s
+- 
+- #15 [identity-service internal] load .dockerignore
+- #15 transferring context: 2B 0.0s done
+- #15 DONE 0.1s
+- 
+- #16 [identity-service internal] load build definition from Dockerfile
+- #16 transferring dockerfile: 768B 0.0s done
+- #16 DONE 0.1s
+- 
+- #4 [identity-service internal] load metadata for docker.io/library/maven:3.9-eclipse-temurin-17
+- #4 ...
+- 
+- #17 [inventory-service internal] load build definition from Dockerfile
+- #17 transferring dockerfile: 769B 0.0s done
+- #17 DONE 0.1s
+- 
+- #18 [inventory-service internal] load .dockerignore
+- #18 transferring context: 2B 0.1s done
+- #18 DONE 0.2s
+- 
+- #19 [api-gateway-service internal] load .dockerignore
+- #19 transferring context: 2B 0.0s done
+- #19 DONE 0.1s
+- 
+- #20 [api-gateway-service internal] load build definition from Dockerfile
+- #20 transferring dockerfile: 771B 0.1s done
+- #20 DONE 0.1s
+- 
+- #21 [payment-service internal] load .dockerignore
+- #21 transferring context: 2B 0.0s done
+- #21 DONE 0.1s
+- 
+- #3 [inventory-service internal] load metadata for docker.io/library/eclipse-temurin:17-jre-jammy
+- #3 DONE 2.2s
+- 
+- #22 [catalog-service internal] load build definition from Dockerfile
+- #22 transferring dockerfile: 767B done
+- #22 DONE 0.1s
+- 
+- #23 [payment-service internal] load build definition from Dockerfile
+- #23 transferring dockerfile: 767B 0.0s done
+- #23 DONE 0.1s
+- 
+- #24 [order-service internal] load build definition from Dockerfile
+- #24 transferring dockerfile: 765B 0.0s done
+- #24 DONE 0.1s
+- 
+- #6 [inventory-service build 1/5] FROM docker.io/library/maven:3.9-eclipse-temurin-17@sha256:d7d39e47098e14b4b09ddb95354b134dacc98f66670d1c22b567fca70995879c
+- #6 DONE 0.0s
+- 
+- #5 [inventory-service stage-1 1/3] FROM docker.io/library/eclipse-temurin:17-jre-jammy@sha256:93db0dba1dacb225fed826c2ae720adae9a71205f2b199b8af7e4df5be010cb7
+- #5 DONE 0.0s
+- 
+- #25 [order-service internal] load .dockerignore
+- #25 transferring context: 2B 0.0s done
+- #25 DONE 0.1s
+- 
+- #26 [catalog-service internal] load .dockerignore
+- #26 transferring context: 2B done
+- #26 DONE 0.1s
+- 
+- #27 [identity-service internal] load build context
+- #27 transferring context: 996B 0.0s done
+- #27 DONE 0.1s
+- 
+- #28 [order-service internal] load build context
+- #28 DONE 0.0s
+- 
+- #6 [order-service build 1/5] FROM docker.io/library/maven:3.9-eclipse-temurin-17@sha256:d7d39e47098e14b4b09ddb95354b134dacc98f66670d1c22b567fca70995879c
+- #6 DONE 0.0s
+- 
+- #5 [order-service stage-1 1/3] FROM docker.io/library/eclipse-temurin:17-jre-jammy@sha256:93db0dba1dacb225fed826c2ae720adae9a71205f2b199b8af7e4df5be010cb7
+- #5 DONE 0.0s
+- 
+- #29 [inventory-service internal] load build context
+- #29 transferring context: 939B 0.0s done
+- #29 DONE 0.1s
+- 
+- #3 [catalog-service internal] load metadata for docker.io/library/eclipse-temurin:17-jre-jammy
+- #3 DONE 2.4s
+- 
+- #4 [order-service internal] load metadata for docker.io/library/maven:3.9-eclipse-temurin-17
+- #4 DONE 2.4s
+- 
+- #30 [catalog-service internal] load build context
+- #30 transferring context: 919B 0.0s done
+- #30 DONE 0.1s
+- 
+- #31 [identity-service build 4/5] COPY src ./src
+- #31 CACHED
+- 
+- #32 [identity-service build 3/5] COPY pom.xml .
+- #32 CACHED
+- 
+- #33 [identity-service build 5/5] RUN mvn clean install -DskipTests
+- #33 CACHED
+- 
+- #34 [identity-service stage-1 3/3] COPY --from=build /app/target/identity-service-0.0.1-SNAPSHOT.jar app.jar
+- #34 CACHED
+- 
+- #35 [identity-service] exporting to image
+- #35 exporting layers done
+- #35 writing image sha256:31847f6322e348481d63dda5abd8f16e5e3107a57c3b8c9a687419b260e269b5 done
+- #35 naming to docker.io/library/gourmet-gateway-identity-service done
+- #35 DONE 0.0s
+- 
+- #8 [inventory-service stage-1 2/3] WORKDIR /app
+- #8 CACHED
+- 
+- #9 [inventory-service build 2/5] WORKDIR /app
+- #9 CACHED
+- 
+- #36 [inventory-service build 5/5] RUN mvn clean install -DskipTests
+- #36 CACHED
+- 
+- #37 [inventory-service build 3/5] COPY pom.xml .
+- #37 CACHED
+- 
+- #38 [inventory-service build 4/5] COPY src ./src
+- #38 CACHED
+- 
+- #39 [inventory-service stage-1 3/3] COPY --from=build /app/target/inventory-service-0.0.1-SNAPSHOT.jar app.jar
+- #39 CACHED
+- 
+- #40 [inventory-service] exporting to image
+- #40 exporting layers done
+- #40 writing image sha256:0bc6b5b27330966eaca1ced53ea5c35ee4a28b7fcc514133b33b98d7082636b6 0.0s done
+- #40 naming to docker.io/library/gourmet-gateway-inventory-service done
+- #40 DONE 0.0s
+- 
+- #41 [api-gateway-service internal] load build context
+- #41 transferring context: 490B 0.0s done
+- #41 DONE 0.1s
+- 
+- #42 [payment-service internal] load build context
+- #42 transferring context: 922B 0.0s done
+- #42 DONE 0.1s
+- 
+- #28 [order-service internal] load build context
+- #28 transferring context: 965B 0.1s done
+- #28 DONE 0.1s
+- 
+- #43 [api-gateway-service build 3/5] COPY pom.xml .
+- #43 CACHED
+- 
+- #44 [api-gateway-service build 4/5] COPY src ./src
+- #44 CACHED
+- 
+- #45 [api-gateway-service build 5/5] RUN mvn clean install -DskipTests
+- #45 CACHED
+- 
+- #46 [api-gateway-service stage-1 3/3] COPY --from=build /app/target/api-gateway-service-0.0.1-SNAPSHOT.jar app.jar
+- #46 CACHED
+- 
+- #47 [payment-service build 5/5] RUN mvn clean install -DskipTests
+- #47 CACHED
+- 
+- #48 [payment-service build 3/5] COPY pom.xml .
+- #48 CACHED
+- 
+- #49 [payment-service build 4/5] COPY src ./src
+- #49 CACHED
+- 
+- #50 [payment-service stage-1 3/3] COPY --from=build /app/target/payment-service-0.0.1-SNAPSHOT.jar app.jar
+- #50 CACHED
+- 
+- #51 [order-service build 5/5] RUN mvn clean install -DskipTests
+- #51 CACHED
+- 
+- #52 [order-service build 3/5] COPY pom.xml .
+- #52 CACHED
+- 
+- #53 [order-service build 4/5] COPY src ./src
+- #53 CACHED
+- 
+- #54 [order-service stage-1 3/3] COPY --from=build /app/target/order-service-0.0.1-SNAPSHOT.jar app.jar
+- #54 CACHED
+- 
+- #55 [catalog-service build 5/5] RUN mvn clean install -DskipTests
+- #55 CACHED
+- 
+- #56 [catalog-service build 3/5] COPY pom.xml .
+- #56 CACHED
+- 
+- #8 [payment-service stage-1 2/3] WORKDIR /app
+- #8 CACHED
+- 
+- #9 [payment-service build 2/5] WORKDIR /app
+- #9 CACHED
+- 
+- #57 [catalog-service build 4/5] COPY src ./src
+- #57 CACHED
+- 
+- #58 [catalog-service stage-1 3/3] COPY --from=build /app/target/catalog-service-0.0.1-SNAPSHOT.jar app.jar
+- #58 CACHED
+- 
+- #59 [catalog-service] exporting to image
+- #59 exporting layers done
+- #59 writing image sha256:ed0853b41803e54b56e8341754da3713df871704997ab4664ff7efbc9dbaec69 done
+- #59 naming to docker.io/library/gourmet-gateway-catalog-service done
+- #59 DONE 0.0s
+- 
+- #60 [api-gateway-service] exporting to image
+- #60 exporting layers done
+- #60 writing image sha256:df73c09ace7636943b326e6f541a92eef9afa3293d1778ba8a6a2eb90d0df454 0.0s done
+- #60 naming to docker.io/library/gourmet-gateway-api-gateway-service
+- #60 naming to docker.io/library/gourmet-gateway-api-gateway-service 0.0s done
+- #60 DONE 0.0s
+- 
+- #61 [payment-service] exporting to image
+- #61 exporting layers done
+- #61 writing image sha256:a00edb05a365081e4228ce69cc2a0db894a2651fc720cd96966eddfb95f6d733 0.0s done
+- #61 naming to docker.io/library/gourmet-gateway-payment-service 0.0s done
+- #61 DONE 0.0s
+- 
+- #62 [order-service] exporting to image
+- #62 exporting layers done
+- #62 writing image sha256:491ee573cec9b572aa01aaf0e9e00af06a6d2e7de4479720df3e3e58c50c8b13 done
+- #62 naming to docker.io/library/gourmet-gateway-order-service 0.0s done
+- #62 DONE 0.0s
+-  Network gourmet-gateway_default  Creating
+-  Network gourmet-gateway_default  Created
+-  Container config-service  Creating
+-  Container keycloak  Creating
+-  Container config-service  Created
+-  Container payment-service  Creating
+-  Container api-gateway-service  Creating
+-  Container identity-service  Creating
+-  Container order-service  Creating
+-  Container catalog-service  Creating
+-  Container inventory-service  Creating
+-  Container keycloak  Created
+-  Container api-gateway-service  Created
+-  Container order-service  Created
+-  Container identity-service  Created
+-  Container catalog-service  Created
+-  Container inventory-service  Created
+-  Container payment-service  Created
+- Attaching to api-gateway-service, catalog-service, config-service, identity-service, inventory-service, keycloak, order-service, payment-service
+- keycloak             | Updating the configuration and installing your custom providers, if any. Please wait.
+- config-service       | 
+- config-service       |   .   ____          _            __ _ _
+- config-service       |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+- config-service       | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+- config-service       |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+- config-service       |   '  |____| .__|_| |_|_| |_\__, | / / / /
+- config-service       |  =========|_|==============|___/=/_/_/_/
+- config-service       |  :: Spring Boot ::                (v3.2.5)
+- config-service       | 
+- config-service       | 2025-09-08T01:17:19.664Z  INFO 1 --- [config-service] [           main] c.n.g.c.ConfigServiceApplication         : Starting ConfigServiceApplication v0.0.1-SNAPSHOT using Java 17.0.16 with PID 1 (/app/app.jar started by root in /app)
+- config-service       | 2025-09-08T01:17:19.686Z  INFO 1 --- [config-service] [           main] c.n.g.c.ConfigServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+- config-service       | 2025-09-08T01:17:29.543Z  INFO 1 --- [config-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=53109aa8-fbd1-365a-b549-92479eac7221
+- config-service       | 2025-09-08T01:17:31.517Z  INFO 1 --- [config-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
+- config-service       | 2025-09-08T01:17:31.575Z  INFO 1 --- [config-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+- config-service       | 2025-09-08T01:17:31.577Z  INFO 1 --- [config-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+- config-service       | 2025-09-08T01:17:31.826Z  INFO 1 --- [config-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+- config-service       | 2025-09-08T01:17:31.843Z  INFO 1 --- [config-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 11527 ms
+- config-service       | 2025-09-08T01:17:42.027Z  INFO 1 --- [config-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+- config-service       | 2025-09-08T01:17:42.712Z  INFO 1 --- [config-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8888 (http) with context path ''
+- config-service       | 2025-09-08T01:17:42.912Z  INFO 1 --- [config-service] [           main] c.n.g.c.ConfigServiceApplication         : Started ConfigServiceApplication in 28.165 seconds (process running for 33.195)
+- config-service       | 2025-09-08T01:17:52.701Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+- config-service       | 2025-09-08T01:17:52.706Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+- config-service       | 2025-09-08T01:17:52.726Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+- keycloak             | 2025-09-08 01:17:57,356 WARN  [io.qua.dep.ind.IndexWrapper] (build-58) Failed to index org.apache.tools.ant.Task: Class does not exist in ClassLoader QuarkusClassLoader:Deployment Class Loader: PROD for keycloak@30457e14
+- keycloak             | 2025-09-08 01:17:57,559 WARN  [io.qua.dep.ind.IndexWrapper] (build-58) Failed to index org.springframework.core.io.DefaultResourceLoader: Class does not exist in ClassLoader QuarkusClassLoader:Deployment Class Loader: PROD for keycloak@30457e14
+- keycloak             | 2025-09-08 01:17:57,560 WARN  [io.qua.dep.ind.IndexWrapper] (build-58) Failed to index org.springframework.core.io.ResourceLoader: Class does not exist in ClassLoader QuarkusClassLoader:Deployment Class Loader: PROD for keycloak@30457e14
+- keycloak             | 2025-09-08 01:17:57,569 WARN  [io.qua.dep.ind.IndexWrapper] (build-58) Failed to index org.springframework.core.io.Resource: Class does not exist in ClassLoader QuarkusClassLoader:Deployment Class Loader: PROD for keycloak@30457e14
+- keycloak             | 2025-09-08 01:17:58,003 WARN  [io.qua.dep.ind.IndexWrapper] (build-58) Failed to index org.apache.activemq.artemis.core.journal.RecordInfo: Class does not exist in ClassLoader QuarkusClassLoader:Deployment Class Loader: PROD for keycloak@30457e14
+- keycloak             | 2025-09-08 01:17:58,006 WARN  [io.qua.dep.ind.IndexWrapper] (build-58) Failed to index org.apache.activemq.artemis.core.journal.Journal: Class does not exist in ClassLoader QuarkusClassLoader:Deployment Class Loader: PROD for keycloak@30457e14
+- keycloak             | 2025-09-08 01:17:58,014 WARN  [io.qua.dep.ind.IndexWrapper] (build-58) Failed to index io.mashona.logwriting.ArrayStore: Class does not exist in ClassLoader QuarkusClassLoader:Deployment Class Loader: PROD for keycloak@30457e14
+- keycloak             | 2025-09-08 01:17:58,078 WARN  [io.qua.dep.ind.IndexWrapper] (build-58) Failed to index jakarta.jms.XAConnection: Class does not exist in ClassLoader QuarkusClassLoader:Deployment Class Loader: PROD for keycloak@30457e14
+- keycloak             | 2025-09-08 01:17:58,084 WARN  [io.qua.dep.ind.IndexWrapper] (build-58) Failed to index jakarta.jms.XASession: Class does not exist in ClassLoader QuarkusClassLoader:Deployment Class Loader: PROD for keycloak@30457e14
+- keycloak             | 2025-09-08 01:17:58,086 WARN  [io.qua.dep.ind.IndexWrapper] (build-58) Failed to index jakarta.jms.XAConnectionFactory: Class does not exist in ClassLoader QuarkusClassLoader:Deployment Class Loader: PROD for keycloak@30457e14
+- keycloak             | 2025-09-08 01:17:58,244 WARN  [io.qua.dep.ind.IndexWrapper] (build-58) Failed to index jakarta.jms.Connection: Class does not exist in ClassLoader QuarkusClassLoader:Deployment Class Loader: PROD for keycloak@30457e14
+- config-service       | 2025-09-08T01:18:02.064Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:18:10.301Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:18:23.614Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:18:36.908Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- keycloak             | 2025-09-08 01:18:46,002 INFO  [io.qua.dep.QuarkusAugmentor] (main) Quarkus augmentation completed in 80191ms
+- config-service       | 2025-09-08T01:18:49.343Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:18:50.585Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:18:51.632Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:18:52.610Z  INFO 1 --- [config-service] [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:18:53.764Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- order-service        | 
+- order-service        |   .   ____          _            __ _ _
+- order-service        |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+- order-service        | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+- order-service        |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+- order-service        |   '  |____| .__|_| |_|_| |_\__, | / / / /
+- order-service        |  =========|_|==============|___/=/_/_/_/
+- order-service        |  :: Spring Boot ::                (v3.2.5)
+- order-service        | 
+- identity-service     | 
+- identity-service     |   .   ____          _            __ _ _
+- identity-service     |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+- identity-service     | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+- identity-service     |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+- identity-service     |   '  |____| .__|_| |_|_| |_\__, | / / / /
+- identity-service     |  =========|_|==============|___/=/_/_/_/
+- identity-service     |  :: Spring Boot ::                (v3.2.5)
+- identity-service     | 
+- config-service       | 2025-09-08T01:18:55.391Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:18:56.792Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- inventory-service    | 
+- inventory-service    |   .   ____          _            __ _ _
+- inventory-service    |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+- inventory-service    | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+- inventory-service    |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+- inventory-service    |   '  |____| .__|_| |_|_| |_\__, | / / / /
+- inventory-service    |  =========|_|==============|___/=/_/_/_/
+- inventory-service    |  :: Spring Boot ::                (v3.2.5)
+- inventory-service    | 
+- order-service        | 2025-09-08T01:18:57.414Z  INFO 1 --- [order-service] [           main] c.n.g.order.OrderServiceApplication      : Starting OrderServiceApplication v0.0.1-SNAPSHOT using Java 17.0.16 with PID 1 (/app/app.jar started by root in /app)
+- order-service        | 2025-09-08T01:18:57.488Z  INFO 1 --- [order-service] [           main] c.n.g.order.OrderServiceApplication      : No active profile set, falling back to 1 default profile: "default"
+- payment-service      | 
+- payment-service      |   .   ____          _            __ _ _
+- payment-service      |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+- payment-service      | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+- payment-service      |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+- payment-service      |   '  |____| .__|_| |_|_| |_\__, | / / / /
+- payment-service      |  =========|_|==============|___/=/_/_/_/
+- payment-service      |  :: Spring Boot ::                (v3.2.5)
+- payment-service      | 
+- identity-service     | 2025-09-08T01:18:58.399Z  INFO 1 --- [identity-service] [           main] c.n.g.i.IdentityServiceApplication       : Starting IdentityServiceApplication v0.0.1-SNAPSHOT using Java 17.0.16 with PID 1 (/app/app.jar started by root in /app)
+- identity-service     | 2025-09-08T01:18:58.491Z  INFO 1 --- [identity-service] [           main] c.n.g.i.IdentityServiceApplication       : No active profile set, falling back to 1 default profile: "default"
+- order-service        | 2025-09-08T01:18:58.988Z  INFO 1 --- [order-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config-service:8888
+- order-service        | 2025-09-08T01:18:58.995Z  INFO 1 --- [order-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=order-service, profiles=[default], label=null, version=9223983ee48b453a0f8b49b77e94cab598806bb7, state=null
+- catalog-service      | 
+- catalog-service      |   .   ____          _            __ _ _
+- catalog-service      |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+- catalog-service      | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+- catalog-service      |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+- catalog-service      |   '  |____| .__|_| |_|_| |_\__, | / / / /
+- catalog-service      |  =========|_|==============|___/=/_/_/_/
+- catalog-service      |  :: Spring Boot ::                (v3.2.5)
+- catalog-service      | 
+- identity-service     | 2025-09-08T01:19:00.300Z  INFO 1 --- [identity-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config-service:8888
+- identity-service     | 2025-09-08T01:19:00.323Z  INFO 1 --- [identity-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=identity-service, profiles=[default], label=null, version=9223983ee48b453a0f8b49b77e94cab598806bb7, state=null
+- inventory-service    | 2025-09-08T01:19:00.673Z  INFO 1 --- [inventory-service] [           main] c.n.g.i.InventoryServiceApplication      : Starting InventoryServiceApplication v0.0.1-SNAPSHOT using Java 17.0.16 with PID 1 (/app/app.jar started by root in /app)
+- inventory-service    | 2025-09-08T01:19:00.726Z  INFO 1 --- [inventory-service] [           main] c.n.g.i.InventoryServiceApplication      : No active profile set, falling back to 1 default profile: "default"
+- payment-service      | 2025-09-08T01:19:01.425Z  INFO 1 --- [payment-service] [           main] c.n.g.payment.PaymentServiceApplication  : Starting PaymentServiceApplication v0.0.1-SNAPSHOT using Java 17.0.16 with PID 1 (/app/app.jar started by root in /app)
+- payment-service      | 2025-09-08T01:19:01.499Z  INFO 1 --- [payment-service] [           main] c.n.g.payment.PaymentServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+- api-gateway-service  | 
+- api-gateway-service  |   .   ____          _            __ _ _
+- api-gateway-service  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+- api-gateway-service  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+- api-gateway-service  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+- api-gateway-service  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+- api-gateway-service  |  =========|_|==============|___/=/_/_/_/
+- api-gateway-service  |  :: Spring Boot ::                (v3.2.5)
+- api-gateway-service  | 
+- inventory-service    | 2025-09-08T01:19:02.362Z  INFO 1 --- [inventory-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config-service:8888
+- config-service       | 2025-09-08T01:19:02.376Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- inventory-service    | 2025-09-08T01:19:02.382Z  INFO 1 --- [inventory-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=inventory-service, profiles=[default], label=null, version=9223983ee48b453a0f8b49b77e94cab598806bb7, state=null
+- catalog-service      | 2025-09-08T01:19:02.915Z  INFO 1 --- [catalog-service] [           main] c.n.g.catalog.CatalogServiceApplication  : Starting CatalogServiceApplication v0.0.1-SNAPSHOT using Java 17.0.16 with PID 1 (/app/app.jar started by root in /app)
+- catalog-service      | 2025-09-08T01:19:02.988Z  INFO 1 --- [catalog-service] [           main] c.n.g.catalog.CatalogServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+- payment-service      | 2025-09-08T01:19:03.004Z  INFO 1 --- [payment-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config-service:8888
+- payment-service      | 2025-09-08T01:19:03.004Z  INFO 1 --- [payment-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=payment-service, profiles=[default], label=null, version=9223983ee48b453a0f8b49b77e94cab598806bb7, state=null
+- catalog-service      | 2025-09-08T01:19:04.425Z  INFO 1 --- [catalog-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config-service:8888
+- catalog-service      | 2025-09-08T01:19:04.425Z  INFO 1 --- [catalog-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=catalog-service, profiles=[default], label=null, version=9223983ee48b453a0f8b49b77e94cab598806bb7, state=null
+- api-gateway-service  | 2025-09-08T01:19:05.283Z  INFO 1 --- [api-gateway-service] [           main] c.n.g.apigateway.ApiGatewayApplication   : Starting ApiGatewayApplication v0.0.1-SNAPSHOT using Java 17.0.16 with PID 1 (/app/app.jar started by root in /app)
+- api-gateway-service  | 2025-09-08T01:19:05.365Z  INFO 1 --- [api-gateway-service] [           main] c.n.g.apigateway.ApiGatewayApplication   : No active profile set, falling back to 1 default profile: "default"
+- api-gateway-service  | 2025-09-08T01:19:07.563Z  INFO 1 --- [api-gateway-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config-service:8888
+- api-gateway-service  | 2025-09-08T01:19:07.563Z  INFO 1 --- [api-gateway-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=api-gateway-service, profiles=[default], label=null, version=9223983ee48b453a0f8b49b77e94cab598806bb7, state=null
+- config-service       | 2025-09-08T01:19:15.346Z  INFO 1 --- [config-service] [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- order-service        | 2025-09-08T01:19:21.503Z  INFO 1 --- [order-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9918a684-c7f7-360c-8b7c-27d7ee3ec621
+- identity-service     | 2025-09-08T01:19:22.779Z  INFO 1 --- [identity-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=7c2e9577-37a9-3a9f-86e4-34be0e0640df
+- inventory-service    | 2025-09-08T01:19:25.211Z  INFO 1 --- [inventory-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=50c4e0e5-5b65-3134-bb68-71b1241a759c
+- payment-service      | 2025-09-08T01:19:25.290Z  INFO 1 --- [payment-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=222b50db-92da-3f25-a93d-f181e8878dbd
+- catalog-service      | 2025-09-08T01:19:26.180Z  INFO 1 --- [catalog-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=27302782-1eaa-3bb3-8542-85fc550489b7
+- config-service       | 2025-09-08T01:19:28.409Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- order-service        | 2025-09-08T01:19:30.206Z  INFO 1 --- [order-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+- order-service        | 2025-09-08T01:19:30.640Z  INFO 1 --- [order-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+- order-service        | 2025-09-08T01:19:30.654Z  INFO 1 --- [order-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+- identity-service     | 2025-09-08T01:19:31.633Z  INFO 1 --- [identity-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+- order-service        | 2025-09-08T01:19:32.160Z  INFO 1 --- [order-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+- identity-service     | 2025-09-08T01:19:32.162Z  INFO 1 --- [identity-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+- identity-service     | 2025-09-08T01:19:32.196Z  INFO 1 --- [identity-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+- order-service        | 2025-09-08T01:19:32.220Z  INFO 1 --- [order-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 33082 ms
+- identity-service     | 2025-09-08T01:19:33.466Z  INFO 1 --- [identity-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+- identity-service     | 2025-09-08T01:19:33.513Z  INFO 1 --- [identity-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 33069 ms
+- api-gateway-service  | 2025-09-08T01:19:33.973Z  INFO 1 --- [api-gateway-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=b2551d84-1053-36ad-8839-9be44f522a32
+- inventory-service    | 2025-09-08T01:19:34.503Z  INFO 1 --- [inventory-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+- payment-service      | 2025-09-08T01:19:34.494Z  INFO 1 --- [payment-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+- payment-service      | 2025-09-08T01:19:34.889Z  INFO 1 --- [payment-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+- payment-service      | 2025-09-08T01:19:34.906Z  INFO 1 --- [payment-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+- inventory-service    | 2025-09-08T01:19:34.937Z  INFO 1 --- [inventory-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+- inventory-service    | 2025-09-08T01:19:34.964Z  INFO 1 --- [inventory-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+- catalog-service      | 2025-09-08T01:19:35.479Z  INFO 1 --- [catalog-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+- catalog-service      | 2025-09-08T01:19:35.907Z  INFO 1 --- [catalog-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+- catalog-service      | 2025-09-08T01:19:35.908Z  INFO 1 --- [catalog-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+- payment-service      | 2025-09-08T01:19:36.338Z  INFO 1 --- [payment-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+- payment-service      | 2025-09-08T01:19:36.389Z  INFO 1 --- [payment-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 33263 ms
+- inventory-service    | 2025-09-08T01:19:36.445Z  INFO 1 --- [inventory-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+- inventory-service    | 2025-09-08T01:19:36.493Z  INFO 1 --- [inventory-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 34007 ms
+- catalog-service      | 2025-09-08T01:19:37.289Z  INFO 1 --- [catalog-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+- catalog-service      | 2025-09-08T01:19:37.339Z  INFO 1 --- [catalog-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 32803 ms
+- config-service       | 2025-09-08T01:19:41.964Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- order-service        | 2025-09-08T01:19:46.292Z  INFO 1 --- [order-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+- order-service        | 2025-09-08T01:19:46.829Z  INFO 1 --- [order-service] [           main] c.n.g.order.OrderServiceApplication      : Started OrderServiceApplication in 79.686 seconds (process running for 93.308)
+- identity-service     | 2025-09-08T01:19:47.203Z  INFO 1 --- [identity-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+- identity-service     | 2025-09-08T01:19:47.621Z  INFO 1 --- [identity-service] [           main] c.n.g.i.IdentityServiceApplication       : Started IdentityServiceApplication in 77.884 seconds (process running for 93.267)
+- payment-service      | 2025-09-08T01:19:48.980Z  INFO 1 --- [payment-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+- inventory-service    | 2025-09-08T01:19:49.023Z  INFO 1 --- [inventory-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+- payment-service      | 2025-09-08T01:19:49.381Z  INFO 1 --- [payment-service] [           main] c.n.g.payment.PaymentServiceApplication  : Started PaymentServiceApplication in 78.905 seconds (process running for 94.502)
+- inventory-service    | 2025-09-08T01:19:49.466Z  INFO 1 --- [inventory-service] [           main] c.n.g.i.InventoryServiceApplication      : Started InventoryServiceApplication in 78.687 seconds (process running for 94.149)
+- catalog-service      | 2025-09-08T01:19:50.205Z  INFO 1 --- [catalog-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+- catalog-service      | 2025-09-08T01:19:50.625Z  INFO 1 --- [catalog-service] [           main] c.n.g.catalog.CatalogServiceApplication  : Started CatalogServiceApplication in 80.749 seconds (process running for 95.835)
+- config-service       | 2025-09-08T01:19:53.556Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- api-gateway-service  | 2025-09-08T01:19:55.087Z  INFO 1 --- [api-gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+- api-gateway-service  | 2025-09-08T01:19:55.089Z  INFO 1 --- [api-gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+- api-gateway-service  | 2025-09-08T01:19:55.091Z  INFO 1 --- [api-gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+- api-gateway-service  | 2025-09-08T01:19:55.092Z  INFO 1 --- [api-gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+- api-gateway-service  | 2025-09-08T01:19:55.095Z  INFO 1 --- [api-gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+- api-gateway-service  | 2025-09-08T01:19:55.098Z  INFO 1 --- [api-gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+- api-gateway-service  | 2025-09-08T01:19:55.099Z  INFO 1 --- [api-gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+- api-gateway-service  | 2025-09-08T01:19:55.099Z  INFO 1 --- [api-gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+- api-gateway-service  | 2025-09-08T01:19:55.099Z  INFO 1 --- [api-gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+- api-gateway-service  | 2025-09-08T01:19:55.099Z  INFO 1 --- [api-gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+- api-gateway-service  | 2025-09-08T01:19:55.099Z  INFO 1 --- [api-gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+- api-gateway-service  | 2025-09-08T01:19:55.106Z  INFO 1 --- [api-gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+- api-gateway-service  | 2025-09-08T01:19:55.106Z  INFO 1 --- [api-gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+- api-gateway-service  | 2025-09-08T01:19:55.106Z  INFO 1 --- [api-gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+- api-gateway-service  | 2025-09-08T01:19:58.081Z  INFO 1 --- [api-gateway-service] [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 8080
+- api-gateway-service  | 2025-09-08T01:19:58.409Z  INFO 1 --- [api-gateway-service] [           main] c.n.g.apigateway.ApiGatewayApplication   : Started ApiGatewayApplication in 88.575 seconds (process running for 104.809)
+- keycloak             | 2025-09-08 01:19:37,864 WARN  [org.infinispan.CONFIG] (keycloak-cache-init) ISPN000569: Unable to persist Infinispan internal caches as no global state enabled
+- keycloak             | 2025-09-08 01:19:40,302 INFO  [org.infinispan.CONTAINER] (keycloak-cache-init) ISPN000556: Starting user marshaller 'org.infinispan.jboss.marshalling.core.JBossUserMarshaller'
+- keycloak             | 2025-09-08 01:19:46,721 INFO  [org.keycloak.quarkus.runtime.hostname.DefaultHostnameProvider] (main) Hostname settings: Base URL: <unset>, Hostname: <request>, Strict HTTPS: false, Path: <request>, Strict BackChannel: false, Admin URL: <unset>, Admin: <request>, Port: -1, Proxied: false
+- keycloak             | 2025-09-08 01:20:03,446 WARN  [io.quarkus.agroal.runtime.DataSources] (JPA Startup Thread) Datasource <default> enables XA but transaction recovery is not enabled. Please enable transaction recovery by setting quarkus.transaction-manager.enable-recovery=true, otherwise data may be lost if the application is terminated abruptly
+- config-service       | 2025-09-08T01:20:04.689Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- keycloak             | 2025-09-08 01:20:10,209 INFO  [org.keycloak.connections.infinispan.DefaultInfinispanConnectionProviderFactory] (main) Node name: node_129450, Site name: null
+- keycloak             | 2025-09-08 01:20:10,253 INFO  [org.keycloak.broker.provider.AbstractIdentityProviderMapper] (main) Registering class org.keycloak.broker.provider.mappersync.ConfigSyncEventListener
+- config-service       | 2025-09-08T01:20:15.771Z  INFO 1 --- [config-service] [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- keycloak             | 2025-09-08 01:20:18,118 INFO  [org.keycloak.quarkus.runtime.storage.legacy.liquibase.QuarkusJpaUpdaterProvider] (main) Initializing database schema. Using changelog META-INF/jpa-changelog-master.xml
+- config-service       | 2025-09-08T01:20:26.697Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- keycloak             | 
+- keycloak             | UPDATE SUMMARY
+- keycloak             | Run:                        124
+- keycloak             | Previously run:               0
+- keycloak             | Filtered out:                 0
+- keycloak             | -------------------------------
+- keycloak             | Total change sets:          124
+- keycloak             | 
+- keycloak             | 2025-09-08 01:20:32,041 INFO  [org.keycloak.services] (main) KC-SERVICES0050: Initializing master realm
+- config-service       | 2025-09-08T01:20:37.397Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- keycloak             | 2025-09-08 01:20:41,766 INFO  [org.keycloak.services] (main) KC-SERVICES0009: Added user 'admin' to realm 'master'
+- keycloak             | 2025-09-08 01:20:42,468 INFO  [io.quarkus] (main) Keycloak 24.0.4 on JVM (powered by Quarkus 3.8.4) started in 112.540s. Listening on: http://0.0.0.0:8080
+- keycloak             | 2025-09-08 01:20:42,484 INFO  [io.quarkus] (main) Profile dev activated. 
+- keycloak             | 2025-09-08 01:20:42,485 INFO  [io.quarkus] (main) Installed features: [agroal, cdi, hibernate-orm, jdbc-h2, keycloak, logging-gelf, narayana-jta, reactive-routes, resteasy-reactive, resteasy-reactive-jackson, smallrye-context-propagation, vertx]
+- keycloak             | 2025-09-08 01:20:42,504 WARN  [org.keycloak.quarkus.runtime.KeycloakMain] (main) Running the server in development mode. DO NOT use this configuration in production.
+- config-service       | 2025-09-08T01:20:47.911Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:20:58.368Z  INFO 1 --- [config-service] [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:21:08.688Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:21:18.975Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:21:29.299Z  INFO 1 --- [config-service] [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:21:40.185Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:21:50.531Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:22:00.840Z  INFO 1 --- [config-service] [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:22:11.207Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:22:21.603Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:22:31.912Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:22:42.184Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:22:52.557Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:23:02.820Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:23:13.082Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:23:23.348Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:23:33.622Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:23:43.888Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:23:54.163Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:24:04.425Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:24:14.710Z  INFO 1 --- [config-service] [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:24:25.011Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:24:35.288Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:24:45.543Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:24:55.814Z  INFO 1 --- [config-service] [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:25:06.184Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:25:16.460Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:25:26.723Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:25:36.983Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:25:47.241Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:25:57.508Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:26:07.766Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:26:18.058Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:26:28.326Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:26:38.594Z  INFO 1 --- [config-service] [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:26:48.870Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:26:59.118Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:27:09.389Z  INFO 1 --- [config-service] [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:27:19.748Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:27:30.029Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:27:40.383Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:27:50.651Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:28:00.939Z  INFO 1 --- [config-service] [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:28:11.230Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:28:21.500Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:28:31.739Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:28:42.012Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:28:52.256Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:29:02.523Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:29:12.787Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:29:23.036Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:29:33.301Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:29:43.633Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:29:53.904Z  INFO 1 --- [config-service] [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:30:04.164Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:30:14.482Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:30:24.744Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:30:35.021Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:30:45.268Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:30:55.515Z  INFO 1 --- [config-service] [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:31:05.759Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:31:16.020Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:31:26.283Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:31:36.528Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:31:46.864Z  INFO 1 --- [config-service] [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:31:57.177Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:32:07.447Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:32:17.697Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:32:27.953Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:32:38.213Z  INFO 1 --- [config-service] [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:32:48.476Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:32:58.757Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:33:09.013Z  INFO 1 --- [config-service] [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:33:19.286Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:33:29.540Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:33:39.790Z  INFO 1 --- [config-service] [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:33:50.072Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:34:00.344Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:34:10.699Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:34:20.968Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:34:31.220Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:34:41.465Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:34:51.713Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:35:01.936Z  INFO 1 --- [config-service] [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:35:12.206Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:35:22.453Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:35:32.718Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:35:42.978Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:35:53.246Z  INFO 1 --- [config-service] [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:36:03.494Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:36:13.736Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:36:24.090Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:36:34.347Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:36:44.593Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:36:54.839Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:37:05.084Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:37:15.329Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:37:25.823Z  INFO 1 --- [config-service] [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:37:36.080Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:37:46.355Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:37:56.618Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:38:06.878Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:38:17.115Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:38:27.377Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:38:38.012Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:38:48.292Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:38:58.566Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:39:08.831Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:39:19.091Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:39:29.340Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:39:39.572Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:39:49.868Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:40:00.137Z  INFO 1 --- [config-service] [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:40:10.391Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:40:20.643Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:40:30.879Z  INFO 1 --- [config-service] [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:40:41.120Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:40:51.469Z  INFO 1 --- [config-service] [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:41:01.755Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:41:12.000Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:41:22.233Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:41:32.485Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:41:42.740Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:41:52.999Z  INFO 1 --- [config-service] [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:42:03.247Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:42:13.506Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:42:23.750Z  INFO 1 --- [config-service] [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:42:34.005Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:42:44.252Z  INFO 1 --- [config-service] [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:42:54.499Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:43:04.827Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:43:15.078Z  INFO 1 --- [config-service] [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:43:25.319Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:43:35.585Z  INFO 1 --- [config-service] [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:43:45.937Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:43:56.171Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:44:06.437Z  INFO 1 --- [config-service] [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:44:16.709Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:44:26.955Z  INFO 1 --- [config-service] [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:44:37.214Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:44:47.449Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:44:57.687Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:45:07.936Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:45:18.266Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:45:28.519Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:45:38.772Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:45:49.007Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:45:59.247Z  INFO 1 --- [config-service] [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:46:09.485Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:46:19.771Z  INFO 1 --- [config-service] [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:46:30.036Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:46:40.266Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:46:50.508Z  INFO 1 --- [config-service] [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:47:00.757Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:47:11.068Z  INFO 1 --- [config-service] [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:47:21.307Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:47:31.668Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:47:41.954Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:47:52.194Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:48:02.445Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:48:12.696Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:48:22.934Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:48:33.178Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:48:43.404Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:48:53.661Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:49:03.902Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:49:14.149Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:49:24.418Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:49:34.646Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:49:44.975Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:49:55.229Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:50:05.498Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:50:15.736Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:50:25.963Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:50:36.313Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:50:46.582Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:50:56.820Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:51:07.059Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:51:17.295Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:51:27.561Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:51:37.788Z  INFO 1 --- [config-service] [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:51:48.048Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:51:58.370Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:52:08.618Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:52:18.866Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:52:29.102Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:52:39.348Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:52:49.584Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:52:59.823Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:53:10.072Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:53:20.344Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:53:30.578Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:53:40.828Z  INFO 1 --- [config-service] [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:53:51.086Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:54:01.323Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:54:11.637Z  INFO 1 --- [config-service] [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:54:21.893Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:54:32.154Z  INFO 1 --- [config-service] [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:54:42.396Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:54:52.653Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:55:02.904Z  INFO 1 --- [config-service] [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:55:13.168Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:55:23.421Z  INFO 1 --- [config-service] [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:55:33.674Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:55:43.935Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:55:54.186Z  INFO 1 --- [config-service] [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:56:04.440Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:56:14.681Z  INFO 1 --- [config-service] [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:56:24.992Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:56:35.300Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:56:45.673Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:56:55.920Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:57:06.178Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:57:16.415Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:57:26.686Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:57:36.903Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:57:47.141Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:57:57.377Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:58:07.619Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:58:17.870Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:58:28.107Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:58:38.439Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:58:48.758Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:58:59.010Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:59:09.257Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:59:19.508Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:59:29.742Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:59:39.989Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T01:59:50.248Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:00:00.531Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:00:10.785Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:00:21.027Z  INFO 1 --- [config-service] [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:00:31.270Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:00:41.531Z  INFO 1 --- [config-service] [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:00:51.918Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:01:02.303Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:01:12.553Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:01:22.779Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:01:33.038Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:01:43.283Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:01:53.516Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:02:03.743Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:02:13.986Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:02:24.219Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:02:34.479Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:02:44.707Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:02:54.937Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:03:05.255Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:03:15.559Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:03:25.799Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:03:36.060Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:03:46.299Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:03:56.539Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:04:06.790Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:04:17.020Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:04:27.259Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:04:37.501Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:04:47.736Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:04:57.970Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:05:08.205Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:05:18.537Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:05:28.883Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:05:39.132Z  INFO 1 --- [config-service] [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:05:49.370Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:05:59.600Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:06:09.861Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:06:20.109Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:06:30.353Z  INFO 1 --- [config-service] [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:06:40.580Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:06:50.827Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:07:01.088Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:07:11.326Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:07:21.555Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:07:31.847Z  INFO 1 --- [config-service] [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:07:42.171Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:07:52.402Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:08:02.634Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:08:12.881Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:08:23.127Z  INFO 1 --- [config-service] [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:08:33.360Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:08:43.606Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:08:53.846Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:09:04.069Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:09:14.330Z  INFO 1 --- [config-service] [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:09:24.570Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:09:34.813Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:09:45.119Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:09:55.435Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:10:05.665Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:10:15.911Z  INFO 1 --- [config-service] [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:10:26.180Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:10:36.421Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:10:46.654Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:10:56.876Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:11:07.110Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:11:17.346Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:11:27.605Z  INFO 1 --- [config-service] [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:11:37.854Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:11:48.106Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:11:58.416Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:12:08.733Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:12:18.970Z  INFO 1 --- [config-service] [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:12:29.205Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:12:39.445Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:12:49.688Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:12:59.941Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:13:10.209Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:13:20.457Z  INFO 1 --- [config-service] [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:13:30.677Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:13:40.903Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:13:51.127Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:14:01.366Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:14:11.701Z  INFO 1 --- [config-service] [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:14:22.002Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:14:32.262Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:14:42.483Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:14:52.715Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:15:02.945Z  INFO 1 --- [config-service] [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:15:13.181Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:15:23.420Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:15:33.656Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:15:43.907Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:15:54.151Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:16:04.380Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:16:14.601Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:16:24.923Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:16:35.297Z  INFO 1 --- [config-service] [nio-8888-exec-3] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:16:45.552Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:16:55.808Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:17:06.025Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:17:16.262Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:17:26.498Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:17:36.737Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:17:46.969Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:17:57.197Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:18:07.422Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:18:17.692Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:18:27.937Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:18:38.293Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:18:48.593Z  INFO 1 --- [config-service] [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:18:58.832Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:19:09.064Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:19:19.292Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:19:29.531Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:19:39.769Z  INFO 1 --- [config-service] [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:19:50.012Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:20:00.269Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:20:10.504Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:20:20.775Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:20:31.000Z  INFO 1 --- [config-service] [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config-service       | 2025-09-08T02:20:41.226Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-6133484836306631416/application.yml]' via location 'file:/tmp/config-repo-6133484836306631416/' (document #0)
+- config

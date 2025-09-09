@@ -19,7 +19,7 @@
     </properties>
     <dependencies>
         <dependency>
-            <groupId>org.springframework.cloud</gId>
+            <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-config</artifactId>
         </dependency>
         <dependency>

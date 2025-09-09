@@ -1,7 +1,0 @@
-# Spring Cloud Bootstrap file
-spring:
-  application:
-    name: api-gateway-service
-  cloud:
-    config:
-      uri: http://config-service:8888

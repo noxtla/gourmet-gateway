@@ -13,5 +13,8 @@
   },
   "scripts": {
     "prepare": "husky install"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1"
   }
 }
