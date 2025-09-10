@@ -6,3 +6,15 @@ spring:
     name: api-gateway-service
   config:
     import: "configserver:http://config-service:8888"
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: catalog-service-route
+          uri: lb://catalog-service:8080
+          predicates:
+            - Path=/catalog-service/**
+          filters:
+            - StripPrefix=1

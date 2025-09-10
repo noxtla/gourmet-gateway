@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 - #0 building with "default" instance using docker driver
 - 
 - #1 [config-service internal] load build definition from Dockerfile
@@ -9147,3 +9148,378 @@ f44c424efbc9   api-gateway-service   194.19%   0B / 0B             0.00%     2.5
 d80ad36e14e2   config-service        194.57%   0B / 0B             0.00%     355kB / 86.1kB   4.04GB / 30GB   0
 16bb2f1022d4   keycloak              193.98%   0B / 0B             0.00%     1.48kB / 192B    4.04GB / 30GB   0
 
+=======
+- #0 building with "default" instance using docker driver
+- 
+- #1 [config-service internal] load .dockerignore
+- #1 transferring context: 2B done
+- #1 DONE 0.0s
+- 
+- #2 [config-service internal] load build definition from Dockerfile
+- #2 transferring dockerfile: 928B 0.0s done
+- #2 DONE 0.0s
+- 
+- #3 [config-service] resolve image config for docker.io/docker/dockerfile:1
+- #3 DONE 0.3s
+- 
+- #4 [config-service] docker-image://docker.io/docker/dockerfile:1@sha256:38387523653efa0039f8e1c89bb74a30504e76ee9f565e25c9a09841f9427b05
+- #4 CACHED
+- 
+- #5 [config-service internal] load build definition from Dockerfile
+- #5 DONE 0.0s
+- 
+- #6 [config-service internal] load metadata for docker.io/library/eclipse-temurin:17-jre-jammy
+- #6 DONE 0.2s
+- 
+- #7 [config-service internal] load metadata for docker.io/library/maven:3.9-eclipse-temurin-17
+- #7 DONE 0.2s
+- 
+- #8 [config-service internal] load .dockerignore
+- #8 DONE 0.0s
+- 
+- #9 [config-service build 1/5] FROM docker.io/library/maven:3.9-eclipse-temurin-17@sha256:d7d39e47098e14b4b09ddb95354b134dacc98f66670d1c22b567fca70995879c
+- #9 DONE 0.0s
+- 
+- #10 [config-service stage-1 1/3] FROM docker.io/library/eclipse-temurin:17-jre-jammy@sha256:93db0dba1dacb225fed826c2ae720adae9a71205f2b199b8af7e4df5be010cb7
+- #10 DONE 0.0s
+- 
+- #11 [config-service internal] load build context
+- #11 transferring context: 500B 0.0s done
+- #11 DONE 0.0s
+- 
+- #12 [config-service build 2/5] WORKDIR /app
+- #12 CACHED
+- 
+- #13 [config-service build 3/5] COPY pom.xml .
+- #13 CACHED
+- 
+- #14 [config-service build 4/5] COPY src ./src
+- #14 CACHED
+- 
+- #15 [config-service build 5/5] RUN --mount=type=cache,target=/root/.m2 mvn clean install -DskipTests
+- #15 CACHED
+- 
+- #16 [config-service stage-1 2/3] WORKDIR /app
+- #16 CACHED
+- 
+- #17 [config-service stage-1 3/3] COPY --from=build /app/target/config-service-0.0.1-SNAPSHOT.jar app.jar
+- #17 CACHED
+- 
+- #18 [config-service] exporting to image
+- #18 exporting layers done
+- #18 writing image sha256:a2773d631407f4127a0e3cd57c11afc0df5f782af760dfb4a5d48fcd3cfc2bd1 done
+- #18 naming to docker.io/library/gourmet-gateway-config-service done
+- #18 DONE 0.0s
+- 
+- #19 [catalog-service internal] load .dockerignore
+- #19 transferring context: 2B done
+- #19 DONE 0.0s
+- 
+- #20 [catalog-service internal] load build definition from Dockerfile
+- #20 transferring dockerfile: 929B 0.0s done
+- #20 DONE 0.0s
+- 
+- #21 [api-gateway-service internal] load build definition from Dockerfile
+- #21 transferring dockerfile: 933B done
+- #21 DONE 0.0s
+- 
+- #22 [api-gateway-service internal] load .dockerignore
+- #22 transferring context: 2B done
+- #22 DONE 0.0s
+- 
+- #3 [api-gateway-service] resolve image config for docker.io/docker/dockerfile:1
+- #3 DONE 0.4s
+- 
+- #4 [api-gateway-service] docker-image://docker.io/docker/dockerfile:1@sha256:38387523653efa0039f8e1c89bb74a30504e76ee9f565e25c9a09841f9427b05
+- #4 CACHED
+- 
+- #23 [catalog-service internal] load build definition from Dockerfile
+- #23 DONE 0.0s
+- 
+- #24 [api-gateway-service internal] load build definition from Dockerfile
+- #24 DONE 0.0s
+- 
+- #7 [catalog-service internal] load metadata for docker.io/library/maven:3.9-eclipse-temurin-17
+- #7 DONE 0.3s
+- 
+- #25 [catalog-service internal] load .dockerignore
+- #25 DONE 0.0s
+- 
+- #6 [catalog-service internal] load metadata for docker.io/library/eclipse-temurin:17-jre-jammy
+- #6 DONE 0.3s
+- 
+- #26 [api-gateway-service internal] load .dockerignore
+- #26 DONE 0.0s
+- 
+- #9 [api-gateway-service build 1/5] FROM docker.io/library/maven:3.9-eclipse-temurin-17@sha256:d7d39e47098e14b4b09ddb95354b134dacc98f66670d1c22b567fca70995879c
+- #9 DONE 0.0s
+- 
+- #27 [api-gateway-service internal] load build context
+- #27 DONE 0.0s
+- 
+- #10 [api-gateway-service stage-1 1/3] FROM docker.io/library/eclipse-temurin:17-jre-jammy@sha256:93db0dba1dacb225fed826c2ae720adae9a71205f2b199b8af7e4df5be010cb7
+- #10 DONE 0.0s
+- 
+- #9 [catalog-service build 1/5] FROM docker.io/library/maven:3.9-eclipse-temurin-17@sha256:d7d39e47098e14b4b09ddb95354b134dacc98f66670d1c22b567fca70995879c
+- #9 DONE 0.0s
+- 
+- #10 [catalog-service stage-1 1/3] FROM docker.io/library/eclipse-temurin:17-jre-jammy@sha256:93db0dba1dacb225fed826c2ae720adae9a71205f2b199b8af7e4df5be010cb7
+- #10 DONE 0.0s
+- 
+- #28 [catalog-service internal] load build context
+- #28 transferring context: 920B done
+- #28 DONE 0.0s
+- 
+- #27 [api-gateway-service internal] load build context
+- #27 transferring context: 917B 0.0s done
+- #27 DONE 0.0s
+- 
+- #16 [catalog-service stage-1 2/3] WORKDIR /app
+- #16 CACHED
+- 
+- #29 [catalog-service build 3/5] COPY pom.xml .
+- #29 CACHED
+- 
+- #30 [catalog-service build 4/5] COPY src ./src
+- #30 CACHED
+- 
+- #31 [catalog-service build 5/5] RUN --mount=type=cache,target=/root/.m2 mvn clean install -DskipTests
+- #31 CACHED
+- 
+- #32 [catalog-service stage-1 3/3] COPY --from=build /app/target/catalog-service-0.0.1-SNAPSHOT.jar app.jar
+- #32 CACHED
+- 
+- #12 [catalog-service build 2/5] WORKDIR /app
+- #12 CACHED
+- 
+- #33 [api-gateway-service build 3/5] COPY pom.xml .
+- #33 CACHED
+- 
+- #34 [catalog-service] exporting to image
+- #34 exporting layers done
+- #34 writing image sha256:624d3dde464c5abd2a6d7cf5193261e8377523c5eb9c5d21f87ffd83823d21c3 done
+- #34 naming to docker.io/library/gourmet-gateway-catalog-service done
+- #34 DONE 0.0s
+- 
+- #35 [api-gateway-service build 4/5] COPY src ./src
+- #35 DONE 0.1s
+- 
+- #36 [api-gateway-service build 5/5] RUN --mount=type=cache,target=/root/.m2 mvn clean install -DskipTests
+- #36 6.945 [INFO] Scanning for projects...
+- #36 8.661 [INFO] 
+- #36 8.661 [INFO] ---------------< com.noxtla.gourmet:api-gateway-service >---------------
+- #36 8.661 [INFO] Building api-gateway-service 0.0.1-SNAPSHOT
+- #36 8.661 [INFO]   from pom.xml
+- #36 8.661 [INFO] --------------------------------[ jar ]---------------------------------
+- #36 11.52 [INFO] 
+- #36 11.52 [INFO] --- clean:3.3.2:clean (default-clean) @ api-gateway-service ---
+- #36 11.74 [INFO] 
+- #36 11.75 [INFO] --- resources:3.3.1:resources (default-resources) @ api-gateway-service ---
+- #36 12.00 [INFO] Copying 1 resource from src/main/resources to target/classes
+- #36 12.02 [INFO] Copying 0 resource from src/main/resources to target/classes
+- #36 12.03 [INFO] 
+- #36 12.03 [INFO] --- compiler:3.11.0:compile (default-compile) @ api-gateway-service ---
+- #36 12.29 [INFO] Changes detected - recompiling the module! :source
+- #36 12.30 [INFO] Compiling 1 source file with javac [debug release 17] to target/classes
+- #36 14.51 [INFO] 
+- #36 14.51 [INFO] --- resources:3.3.1:testResources (default-testResources) @ api-gateway-service ---
+- #36 14.54 [INFO] skip non existing resourceDirectory /app/src/test/resources
+- #36 14.54 [INFO] 
+- #36 14.54 [INFO] --- compiler:3.11.0:testCompile (default-testCompile) @ api-gateway-service ---
+- #36 14.55 [INFO] No sources to compile
+- #36 14.56 [INFO] 
+- #36 14.56 [INFO] --- surefire:3.1.2:test (default-test) @ api-gateway-service ---
+- #36 15.05 [INFO] Tests are skipped.
+- #36 15.05 [INFO] 
+- #36 15.05 [INFO] --- jar:3.3.0:jar (default-jar) @ api-gateway-service ---
+- #36 15.53 [INFO] Building jar: /app/target/api-gateway-service-0.0.1-SNAPSHOT.jar
+- #36 15.69 [INFO] 
+- #36 15.69 [INFO] --- spring-boot:3.2.5:repackage (repackage) @ api-gateway-service ---
+- #36 16.70 [INFO] Replacing main artifact /app/target/api-gateway-service-0.0.1-SNAPSHOT.jar with repackaged archive, adding nested dependencies in BOOT-INF/.
+- #36 16.70 [INFO] The original artifact has been renamed to /app/target/api-gateway-service-0.0.1-SNAPSHOT.jar.original
+- #36 16.70 [INFO] 
+- #36 16.71 [INFO] --- install:3.1.1:install (default-install) @ api-gateway-service ---
+- #36 16.77 [INFO] Installing /app/pom.xml to /root/.m2/repository/com/noxtla/gourmet/api-gateway-service/0.0.1-SNAPSHOT/api-gateway-service-0.0.1-SNAPSHOT.pom
+- #36 16.79 [INFO] Installing /app/target/api-gateway-service-0.0.1-SNAPSHOT.jar to /root/.m2/repository/com/noxtla/gourmet/api-gateway-service/0.0.1-SNAPSHOT/api-gateway-service-0.0.1-SNAPSHOT.jar
+- #36 17.13 [INFO] ------------------------------------------------------------------------
+- #36 17.13 [INFO] BUILD SUCCESS
+- #36 17.13 [INFO] ------------------------------------------------------------------------
+- #36 17.13 [INFO] Total time:  10.283 s
+- #36 17.13 [INFO] Finished at: 2025-09-09T23:19:41Z
+- #36 17.13 [INFO] ------------------------------------------------------------------------
+- #36 DONE 17.4s
+- 
+- #16 [api-gateway-service stage-1 2/3] WORKDIR /app
+- #16 CACHED
+- 
+- #37 [api-gateway-service stage-1 3/3] COPY --from=build /app/target/api-gateway-service-0.0.1-SNAPSHOT.jar app.jar
+- #37 DONE 0.2s
+- 
+- #38 [api-gateway-service] exporting to image
+- #38 exporting layers
+- #38 exporting layers 1.1s done
+- #38 writing image sha256:f220488d12f26b39906246b4ad84f7b3cae54c7f74982c1ee12a5425e523a587 done
+- #38 naming to docker.io/library/gourmet-gateway-api-gateway-service
+- #38 naming to docker.io/library/gourmet-gateway-api-gateway-service done
+- #38 DONE 1.1s
+-  Network gourmet-gateway_default  Creating
+-  Network gourmet-gateway_default  Created
+-  Container config-service  Creating
+-  config-service Your kernel does not support swap limit capabilities or the cgroup is not mounted. Memory limited without swap. 
+-  Container config-service  Created
+-  Container catalog-service  Creating
+-  Container api-gateway-service  Creating
+-  api-gateway-service Your kernel does not support swap limit capabilities or the cgroup is not mounted. Memory limited without swap. 
+-  catalog-service Your kernel does not support swap limit capabilities or the cgroup is not mounted. Memory limited without swap. 
+-  Container catalog-service  Created
+-  Container api-gateway-service  Created
+- Attaching to api-gateway-service, catalog-service, config-service
+- config-service       | 
+- config-service       |   .   ____          _            __ _ _
+- config-service       |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+- config-service       | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+- config-service       |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+- config-service       |   '  |____| .__|_| |_|_| |_\__, | / / / /
+- config-service       |  =========|_|==============|___/=/_/_/_/
+- config-service       |  :: Spring Boot ::                (v3.2.5)
+- config-service       | 
+- config-service       | 2025-09-09T23:19:49.124Z  INFO 1 --- [config-service] [           main] c.n.g.c.ConfigServiceApplication         : Starting ConfigServiceApplication v0.0.1-SNAPSHOT using Java 17.0.16 with PID 1 (/app/app.jar started by root in /app)
+- config-service       | 2025-09-09T23:19:49.136Z  INFO 1 --- [config-service] [           main] c.n.g.c.ConfigServiceApplication         : No active profile set, falling back to 1 default profile: "default"
+- config-service       | 2025-09-09T23:19:53.630Z  INFO 1 --- [config-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=53109aa8-fbd1-365a-b549-92479eac7221
+- config-service       | 2025-09-09T23:19:54.458Z  INFO 1 --- [config-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8888 (http)
+- config-service       | 2025-09-09T23:19:54.487Z  INFO 1 --- [config-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+- config-service       | 2025-09-09T23:19:54.488Z  INFO 1 --- [config-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+- config-service       | 2025-09-09T23:19:54.580Z  INFO 1 --- [config-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+- config-service       | 2025-09-09T23:19:54.584Z  INFO 1 --- [config-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 5218 ms
+- config-service       | 2025-09-09T23:19:58.020Z  INFO 1 --- [config-service] [           main] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint(s) beneath base path '/actuator'
+- config-service       | 2025-09-09T23:19:58.165Z  INFO 1 --- [config-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8888 (http) with context path ''
+- config-service       | 2025-09-09T23:19:58.243Z  INFO 1 --- [config-service] [           main] c.n.g.c.ConfigServiceApplication         : Started ConfigServiceApplication in 11.437 seconds (process running for 14.136)
+- config-service       | 2025-09-09T23:20:04.590Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+- config-service       | 2025-09-09T23:20:04.591Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+- config-service       | 2025-09-09T23:20:04.595Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+- config-service       | 2025-09-09T23:20:09.997Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-3505404499210915904/application.yml]' via location 'file:/tmp/config-repo-3505404499210915904/' (document #0)
+- config-service       | 2025-09-09T23:20:19.821Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-3505404499210915904/application.yml]' via location 'file:/tmp/config-repo-3505404499210915904/' (document #0)
+- config-service       | 2025-09-09T23:20:29.898Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-3505404499210915904/application.yml]' via location 'file:/tmp/config-repo-3505404499210915904/' (document #0)
+- config-service       | 2025-09-09T23:20:30.418Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-3505404499210915904/application.yml]' via location 'file:/tmp/config-repo-3505404499210915904/' (document #0)
+- config-service       | 2025-09-09T23:20:30.938Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-3505404499210915904/application.yml]' via location 'file:/tmp/config-repo-3505404499210915904/' (document #0)
+- catalog-service      | 
+- catalog-service      |   .   ____          _            __ _ _
+- catalog-service      |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+- catalog-service      | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+- catalog-service      |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+- catalog-service      |   '  |____| .__|_| |_|_| |_\__, | / / / /
+- catalog-service      |  =========|_|==============|___/=/_/_/_/
+- catalog-service      |  :: Spring Boot ::                (v3.2.5)
+- catalog-service      | 
+- api-gateway-service  | 
+- api-gateway-service  |   .   ____          _            __ _ _
+- api-gateway-service  |  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+- api-gateway-service  | ( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+- api-gateway-service  |  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+- api-gateway-service  |   '  |____| .__|_| |_|_| |_\__, | / / / /
+- api-gateway-service  |  =========|_|==============|___/=/_/_/_/
+- api-gateway-service  |  :: Spring Boot ::                (v3.2.5)
+- api-gateway-service  | 
+- catalog-service      | 2025-09-09T23:20:32.065Z  INFO 1 --- [catalog-service] [           main] c.n.g.catalog.CatalogServiceApplication  : Starting CatalogServiceApplication v0.0.1-SNAPSHOT using Java 17.0.16 with PID 1 (/app/app.jar started by root in /app)
+- catalog-service      | 2025-09-09T23:20:32.081Z  INFO 1 --- [catalog-service] [           main] c.n.g.catalog.CatalogServiceApplication  : No active profile set, falling back to 1 default profile: "default"
+- catalog-service      | 2025-09-09T23:20:32.682Z  INFO 1 --- [catalog-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config-service:8888
+- catalog-service      | 2025-09-09T23:20:32.685Z  INFO 1 --- [catalog-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=catalog-service, profiles=[default], label=null, version=9223983ee48b453a0f8b49b77e94cab598806bb7, state=null
+- api-gateway-service  | 2025-09-09T23:20:33.030Z  INFO 1 --- [api-gateway-service] [           main] c.n.g.apigateway.ApiGatewayApplication   : Starting ApiGatewayApplication v0.0.1-SNAPSHOT using Java 17.0.16 with PID 1 (/app/app.jar started by root in /app)
+- api-gateway-service  | 2025-09-09T23:20:33.068Z  INFO 1 --- [api-gateway-service] [           main] c.n.g.apigateway.ApiGatewayApplication   : No active profile set, falling back to 1 default profile: "default"
+- api-gateway-service  | 2025-09-09T23:20:33.697Z  INFO 1 --- [api-gateway-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://config-service:8888
+- api-gateway-service  | 2025-09-09T23:20:33.697Z  INFO 1 --- [api-gateway-service] [           main] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=api-gateway-service, profiles=[default], label=null, version=9223983ee48b453a0f8b49b77e94cab598806bb7, state=null
+- catalog-service      | 2025-09-09T23:20:38.853Z  INFO 1 --- [catalog-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=091034df-6281-3ba2-bb7f-5f84b3815bf1
+- catalog-service      | 2025-09-09T23:20:39.206Z  WARN 1 --- [catalog-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+- catalog-service      | 2025-09-09T23:20:39.245Z  WARN 1 --- [catalog-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- catalog-service      | 2025-09-09T23:20:39.258Z  WARN 1 --- [catalog-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- catalog-service      | 2025-09-09T23:20:39.327Z  WARN 1 --- [catalog-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- catalog-service      | 2025-09-09T23:20:39.350Z  WARN 1 --- [catalog-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- catalog-service      | 2025-09-09T23:20:39.357Z  WARN 1 --- [catalog-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$516/0x000079f1f03537b8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- catalog-service      | 2025-09-09T23:20:39.366Z  WARN 1 --- [catalog-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- catalog-service      | 2025-09-09T23:20:39.410Z  WARN 1 --- [catalog-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.loadbalancer-org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- catalog-service      | 2025-09-09T23:20:39.479Z  WARN 1 --- [catalog-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- catalog-service      | 2025-09-09T23:20:39.485Z  WARN 1 --- [catalog-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- catalog-service      | 2025-09-09T23:20:39.490Z  WARN 1 --- [catalog-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientFactory' of type [org.springframework.cloud.loadbalancer.support.LoadBalancerClientFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- catalog-service      | 2025-09-09T23:20:39.515Z  WARN 1 --- [catalog-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'blockingLoadBalancerClient' of type [org.springframework.cloud.loadbalancer.blocking.client.BlockingLoadBalancerClient] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- catalog-service      | 2025-09-09T23:20:39.568Z  WARN 1 --- [catalog-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerServiceInstanceCookieTransformer' of type [org.springframework.cloud.loadbalancer.core.LoadBalancerServiceInstanceCookieTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- catalog-service      | 2025-09-09T23:20:39.580Z  WARN 1 --- [catalog-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'xForwarderHeadersTransformer' of type [org.springframework.cloud.loadbalancer.blocking.XForwardedHeadersTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- catalog-service      | 2025-09-09T23:20:39.590Z  WARN 1 --- [catalog-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- catalog-service      | 2025-09-09T23:20:39.598Z  WARN 1 --- [catalog-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerRequestFactory' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerRequestFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- catalog-service      | 2025-09-09T23:20:39.603Z  WARN 1 --- [catalog-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- api-gateway-service  | 2025-09-09T23:20:41.427Z  INFO 1 --- [api-gateway-service] [           main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=5dd83b86-e3d3-3be6-a651-8bc29f16e95e
+- catalog-service      | 2025-09-09T23:20:41.576Z  INFO 1 --- [catalog-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+- catalog-service      | 2025-09-09T23:20:41.785Z  INFO 1 --- [catalog-service] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+- catalog-service      | 2025-09-09T23:20:41.797Z  INFO 1 --- [catalog-service] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.20]
+- catalog-service      | 2025-09-09T23:20:42.491Z  INFO 1 --- [catalog-service] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+- catalog-service      | 2025-09-09T23:20:42.519Z  INFO 1 --- [catalog-service] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 9787 ms
+- config-service       | 2025-09-09T23:20:42.786Z  INFO 1 --- [config-service] [nio-8888-exec-8] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-3505404499210915904/application.yml]' via location 'file:/tmp/config-repo-3505404499210915904/' (document #0)
+- api-gateway-service  | 2025-09-09T23:20:42.813Z  WARN 1 --- [api-gateway-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration$LoadBalancerInterceptorConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [lbRestClientPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+- api-gateway-service  | 2025-09-09T23:20:42.866Z  WARN 1 --- [api-gateway-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- api-gateway-service  | 2025-09-09T23:20:42.885Z  WARN 1 --- [api-gateway-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- api-gateway-service  | 2025-09-09T23:20:42.994Z  WARN 1 --- [api-gateway-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- api-gateway-service  | 2025-09-09T23:20:43.011Z  WARN 1 --- [api-gateway-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- api-gateway-service  | 2025-09-09T23:20:43.026Z  WARN 1 --- [api-gateway-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$519/0x00007f8a843b97e0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- api-gateway-service  | 2025-09-09T23:20:43.047Z  WARN 1 --- [api-gateway-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- api-gateway-service  | 2025-09-09T23:20:43.184Z  WARN 1 --- [api-gateway-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'spring.cloud.loadbalancer-org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerClientsProperties] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- api-gateway-service  | 2025-09-09T23:20:43.245Z  WARN 1 --- [api-gateway-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.LoadBalancerAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- api-gateway-service  | 2025-09-09T23:20:43.256Z  WARN 1 --- [api-gateway-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'default.org.springframework.cloud.loadbalancer.config.BlockingLoadBalancerClientAutoConfiguration.LoadBalancerClientSpecification' of type [org.springframework.cloud.loadbalancer.annotation.LoadBalancerClientSpecification] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- api-gateway-service  | 2025-09-09T23:20:43.262Z  WARN 1 --- [api-gateway-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerClientFactory' of type [org.springframework.cloud.loadbalancer.support.LoadBalancerClientFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- api-gateway-service  | 2025-09-09T23:20:43.296Z  WARN 1 --- [api-gateway-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'blockingLoadBalancerClient' of type [org.springframework.cloud.loadbalancer.blocking.client.BlockingLoadBalancerClient] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- api-gateway-service  | 2025-09-09T23:20:43.392Z  WARN 1 --- [api-gateway-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerServiceInstanceCookieTransformer' of type [org.springframework.cloud.loadbalancer.core.LoadBalancerServiceInstanceCookieTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- api-gateway-service  | 2025-09-09T23:20:43.402Z  WARN 1 --- [api-gateway-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'xForwarderHeadersTransformer' of type [org.springframework.cloud.loadbalancer.blocking.XForwardedHeadersTransformer] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- api-gateway-service  | 2025-09-09T23:20:43.409Z  WARN 1 --- [api-gateway-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- api-gateway-service  | 2025-09-09T23:20:43.417Z  WARN 1 --- [api-gateway-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerRequestFactory' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerRequestFactory] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- api-gateway-service  | 2025-09-09T23:20:43.431Z  WARN 1 --- [api-gateway-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'loadBalancerInterceptor' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerInterceptor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [lbRestClientPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- api-gateway-service  | 2025-09-09T23:20:43.440Z  WARN 1 --- [api-gateway-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). The currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor] is declared through a non-static factory method on that class; consider declaring it as static instead.
+- api-gateway-service  | 2025-09-09T23:20:43.452Z  WARN 1 --- [api-gateway-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig' of type [org.springframework.cloud.client.loadbalancer.reactive.LoadBalancerBeanPostProcessorAutoConfiguration$ReactorDeferringLoadBalancerFilterConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- api-gateway-service  | 2025-09-09T23:20:43.469Z  WARN 1 --- [api-gateway-service] [           main] trationDelegate$BeanPostProcessorChecker : Bean 'reactorDeferringLoadBalancerExchangeFilterFunction' of type [org.springframework.cloud.client.loadbalancer.reactive.DeferringLoadBalancerExchangeFilterFunction] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying). Is this bean getting eagerly injected into a currently created BeanPostProcessor [loadBalancerWebClientBuilderBeanPostProcessor]? Check the corresponding BeanPostProcessor declaration and its dependencies.
+- catalog-service      | 2025-09-09T23:20:46.088Z  WARN 1 --- [catalog-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+- catalog-service      | 2025-09-09T23:20:46.286Z  INFO 1 --- [catalog-service] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path ''
+- catalog-service      | 2025-09-09T23:20:46.425Z  INFO 1 --- [catalog-service] [           main] c.n.g.catalog.CatalogServiceApplication  : Started CatalogServiceApplication in 22.303 seconds (process running for 25.752)
+- api-gateway-service  | 2025-09-09T23:20:48.548Z  INFO 1 --- [api-gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [After]
+- api-gateway-service  | 2025-09-09T23:20:48.549Z  INFO 1 --- [api-gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Before]
+- api-gateway-service  | 2025-09-09T23:20:48.549Z  INFO 1 --- [api-gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Between]
+- api-gateway-service  | 2025-09-09T23:20:48.549Z  INFO 1 --- [api-gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Cookie]
+- api-gateway-service  | 2025-09-09T23:20:48.549Z  INFO 1 --- [api-gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Header]
+- api-gateway-service  | 2025-09-09T23:20:48.550Z  INFO 1 --- [api-gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Host]
+- api-gateway-service  | 2025-09-09T23:20:48.550Z  INFO 1 --- [api-gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Method]
+- api-gateway-service  | 2025-09-09T23:20:48.551Z  INFO 1 --- [api-gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Path]
+- api-gateway-service  | 2025-09-09T23:20:48.551Z  INFO 1 --- [api-gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Query]
+- api-gateway-service  | 2025-09-09T23:20:48.551Z  INFO 1 --- [api-gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [ReadBody]
+- api-gateway-service  | 2025-09-09T23:20:48.551Z  INFO 1 --- [api-gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [RemoteAddr]
+- api-gateway-service  | 2025-09-09T23:20:48.551Z  INFO 1 --- [api-gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [XForwardedRemoteAddr]
+- api-gateway-service  | 2025-09-09T23:20:48.551Z  INFO 1 --- [api-gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [Weight]
+- api-gateway-service  | 2025-09-09T23:20:48.551Z  INFO 1 --- [api-gateway-service] [           main] o.s.c.g.r.RouteDefinitionRouteLocator    : Loaded RoutePredicateFactory [CloudFoundryRouteService]
+- api-gateway-service  | 2025-09-09T23:20:49.547Z  WARN 1 --- [api-gateway-service] [           main] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+- api-gateway-service  | 2025-09-09T23:20:49.968Z  INFO 1 --- [api-gateway-service] [           main] o.s.b.web.embedded.netty.NettyWebServer  : Netty started on port 80
+- api-gateway-service  | 2025-09-09T23:20:50.445Z  INFO 1 --- [api-gateway-service] [           main] c.n.g.apigateway.ApiGatewayApplication   : Started ApiGatewayApplication in 26.129 seconds (process running for 29.669)
+- config-service       | 2025-09-09T23:20:53.281Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-3505404499210915904/application.yml]' via location 'file:/tmp/config-repo-3505404499210915904/' (document #0)
+- config-service       | 2025-09-09T23:21:03.602Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-3505404499210915904/application.yml]' via location 'file:/tmp/config-repo-3505404499210915904/' (document #0)
+- api-gateway-service  | 2025-09-09T23:21:08.569Z  WARN 1 --- [api-gateway-service] [or-http-epoll-2] o.s.c.l.core.RoundRobinLoadBalancer      : No servers available for service: catalog-service
+- api-gateway-service  | 2025-09-09T23:21:12.707Z  WARN 1 --- [api-gateway-service] [or-http-epoll-3] o.s.c.l.core.RoundRobinLoadBalancer      : No servers available for service: catalog-service
+- config-service       | 2025-09-09T23:21:13.886Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-3505404499210915904/application.yml]' via location 'file:/tmp/config-repo-3505404499210915904/' (document #0)
+- api-gateway-service  | 2025-09-09T23:21:17.214Z  WARN 1 --- [api-gateway-service] [or-http-epoll-4] o.s.c.l.core.RoundRobinLoadBalancer      : No servers available for service: catalog-service
+- config-service       | 2025-09-09T23:21:24.258Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-3505404499210915904/application.yml]' via location 'file:/tmp/config-repo-3505404499210915904/' (document #0)
+- api-gateway-service  | 2025-09-09T23:21:30.117Z  WARN 1 --- [api-gateway-service] [or-http-epoll-1] o.s.c.l.core.RoundRobinLoadBalancer      : No servers available for service: catalog-service
+- config-service       | 2025-09-09T23:21:34.552Z  INFO 1 --- [config-service] [nio-8888-exec-9] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-3505404499210915904/application.yml]' via location 'file:/tmp/config-repo-3505404499210915904/' (document #0)
+- config-service       | 2025-09-09T23:21:44.977Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-3505404499210915904/application.yml]' via location 'file:/tmp/config-repo-3505404499210915904/' (document #0)
+- config-service       | 2025-09-09T23:21:55.300Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-3505404499210915904/application.yml]' via location 'file:/tmp/config-repo-3505404499210915904/' (document #0)
+- config-service       | 2025-09-09T23:22:05.788Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-3505404499210915904/application.yml]' via location 'file:/tmp/config-repo-3505404499210915904/' (document #0)
+- config-service       | 2025-09-09T23:22:16.119Z  INFO 1 --- [config-service] [nio-8888-exec-5] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-3505404499210915904/application.yml]' via location 'file:/tmp/config-repo-3505404499210915904/' (document #0)
+- config-service       | 2025-09-09T23:22:26.451Z  INFO 1 --- [config-service] [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-3505404499210915904/application.yml]' via location 'file:/tmp/config-repo-3505404499210915904/' (document #0)
+- api-gateway-service  | 2025-09-09T23:22:35.816Z  WARN 1 --- [api-gateway-service] [or-http-epoll-2] o.s.c.l.core.RoundRobinLoadBalancer      : No servers available for service: catalog-service
+- config-service       | 2025-09-09T23:22:36.750Z  INFO 1 --- [config-service] [io-8888-exec-10] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-3505404499210915904/application.yml]' via location 'file:/tmp/config-repo-3505404499210915904/' (document #0)
+- config-service       | 2025-09-09T23:22:47.201Z  INFO 1 --- [config-service] [nio-8888-exec-1] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-3505404499210915904/application.yml]' via location 'file:/tmp/config-repo-3505404499210915904/' (document #0)
+- api-gateway-service  | 2025-09-09T23:22:56.596Z  WARN 1 --- [api-gateway-service] [or-http-epoll-3] o.s.c.l.core.RoundRobinLoadBalancer      : No servers available for service: catalog-service
+- config-service       | 2025-09-09T23:22:57.737Z  INFO 1 --- [config-service] [nio-8888-exec-2] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-3505404499210915904/application.yml]' via location 'file:/tmp/config-repo-3505404499210915904/' (document #0)
+- config-service       | 2025-09-09T23:23:08.025Z  INFO 1 --- [config-service] [nio-8888-exec-4] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-3505404499210915904/application.yml]' via location 'file:/tmp/config-repo-3505404499210915904/' (document #0)
+- api-gateway-service  | 2025-09-09T23:23:17.049Z  WARN 1 --- [api-gateway-service] [or-http-epoll-4] o.s.c.l.core.RoundRobinLoadBalancer      : No servers available for service: catalog-service
+- config-service       | 2025-09-09T23:23:18.603Z  INFO 1 --- [config-service] [nio-8888-exec-6] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-3505404499210915904/application.yml]' via location 'file:/tmp/config-repo-3505404499210915904/' (document #0)
+- config-service       | 2025-09-09T23:23:28.895Z  INFO 1 --- [config-service] [nio-8888-exec-7] o.s.c.c.s.e.NativeEnvironmentRepository  : Adding property source: Config resource 'file [/tmp/config-repo-3505404499210915904/application.yml]' via location 'file:/tmp/config-repo-3505404499210915904/' (document #0)
+- api-gateway-service  | 2025-09-09T23:23:29.091Z  WARN 1 --- [api-gateway-service] [or-http-epoll-1] o.s.c.l.core.RoundRobinLoadBalancer      : No servers available for service: catalog-service
+- catalog-service exited with code 0
+- catalog-service exited with code 143
+- api-gateway-service exited with code 0
+- api-gateway-service exited with code 143
+- config-service exited with code 0
+>>>>>>> 4ab275e (fix(un paso atras eliminar gateway): eliminar gateway y hacer el request directo)
